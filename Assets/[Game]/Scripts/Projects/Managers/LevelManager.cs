@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : Singleton<LevelManager>
 {
+    public Level level;
     private void OnEnable()
     {
         EventManager.OnGameOver.AddListener(GameOver);

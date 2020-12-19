@@ -8,11 +8,15 @@ public class GroundObject : MonoBehaviour
     public Transform endPoint;
     private void OnEnable()
     {
+        if (Managers.Instance == null)
+            return;
         GroundManager.Instance.AddGround(this);
     }
 
     private void OnDisable()
-    {
+    { 
+       if (Managers.Instance == null)
+            return;
         GroundManager.Instance.RemoveGround(this);
     }
 }

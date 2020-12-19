@@ -7,25 +7,31 @@ public class GroundManager : Singleton<GroundManager>
 {
     List<GroundObject> grounds;
 
-    public int groundCount = 3;
+    public int groundCount = 7;
     public float groundSpeed = 5f;
-    public List<GroundObject> Grounds { get { return (grounds == null) ? grounds = new List<GroundObject>() : grounds; } set { grounds = value; } }
+    public List<GroundObject> Grounds { get { return (grounds == null) ? grounds = new List<GroundObject>() : grounds; } private set { grounds = value; } }
 
+    [SerializeField]
+    private bool canMoveTracks;
     private void OnEnable()
     {
         EventManager.OnGameStart.AddListener(Initilize);
+        EventManager.OnPlayerStartedRunning.AddListener(() => canMoveTracks = true);
     }
 
     private void OnDisable()
     {
         EventManager.OnGameStart.RemoveListener(Initilize);
+        EventManager.OnPlayerStartedRunning.AddListener(() => canMoveTracks = true);
     }
 
 
     private void Initilize()
     {
+       
         for (int i = 0; i < groundCount; i++)
         {
+            Debug.Log(i);
             CreateGround();
         }
     }
@@ -33,7 +39,6 @@ public class GroundManager : Singleton<GroundManager>
     private void CreateGround()
     {
         Vector3 createPos = Vector3.zero;
-
         if (Grounds != null)
         {
             if (Grounds.Count > 0)
@@ -42,17 +47,18 @@ public class GroundManager : Singleton<GroundManager>
             }
         }
         ////GameObject trackObj = Instantiate(LevelManager.Instance.CurrentLevel.GetRandomTrack(LevelManager.Instance.CurrentTheme), createPos, Quaternion.identity);
-        GameObject groundObj = Instantiate(Grounds[0].gameObject, createPos, Quaternion.identity);
+        GameObject groundObj = Instantiate(LevelManager.Instance.level.GetRandomTrack().gameObject, createPos, Quaternion.identity);
     }
 
     public void DisposeGround (GroundObject groundObject) 
     {
-        RemoveGround(groundObject);
-        Destroy(groundObject);
+        Grounds.Remove(groundObject);
+        Destroy(groundObject.gameObject);
     }
 
     private void Update()
     {
+        if (!canMoveTracks) return;
         MoveGroundObjects();
         ManageGroundObjects();
     }
@@ -61,6 +67,7 @@ public class GroundManager : Singleton<GroundManager>
 
     public void AddGround(GroundObject groundObject)
     {
+
         if (!Grounds.Contains(groundObject))
         {
             Grounds.Add(groundObject);

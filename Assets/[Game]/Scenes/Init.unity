@@ -177,6 +177,8 @@ GameObject:
   - component: {fileID: 935342163}
   - component: {fileID: 935342162}
   - component: {fileID: 935342161}
+  - component: {fileID: 935342165}
+  - component: {fileID: 935342164}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -210,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3bc4885953af04428de8ad1ccf6d8d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: {fileID: 11400000, guid: 6268d0c84e87ac449960a2df8bdee427, type: 2}
 --- !u!114 &935342162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,5 +237,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4561fda17c66a49bb3d93245bea34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCount: 3
+  groundCount: 7
   groundSpeed: 10
+  canMoveTracks: 0
+--- !u!114 &935342164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935342159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac4aabdb2d16104da6538a94feb61b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &935342165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935342159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51143d7ee8bedcf439ca6793f8f315ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGameStarted: 0
