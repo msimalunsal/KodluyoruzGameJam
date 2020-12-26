@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public enum CharacterControllerType { Player, AI }
 
-public class Character : MonoBehaviour
+public class Character : MonoBehaviour, IDamageable
 {
 
     public CharacterControllerType CharacterControllerType = CharacterControllerType.Player;
@@ -76,6 +76,11 @@ public class Character : MonoBehaviour
         IsDead = false;
         IsControlable = true;
         OnCharacterRevive.Invoke();
+    }
+
+    public void Damage()
+    {
+        KillCharacter();
     }
     #endregion
 }

@@ -82,7 +82,6 @@
     <Compile Include="Assets\[Game]\Scripts\Projects\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Interfaces\IRotateable.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Interfaces\IScaleable.cs" />
-    <Compile Include="Assets\[Game]\Scripts\Projects\LevelState\FailController.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\EventManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\GameManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\GroundManager.cs" />

@@ -7,7 +7,6 @@ public class Obstacle : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         IDamageable IDamageable = collision.GetComponent<IDamageable>();
-
         if (IDamageable != null)
         {
             IDamageable.Damage();
