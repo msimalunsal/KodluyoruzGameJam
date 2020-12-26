@@ -3,6 +3,11 @@ using DG.Tweening;
 
 public class CharacterController : MonoBehaviour, ICharacterController, IRotateable, IScaleable
 {
+    #region Variables
+    Tween scaleTween;
+    Vector3 startLocalScale = new Vector3();
+    #endregion
+
     #region Properties
     public LaneObject CurrentLane { get { return GroundManager.Instance.GetClosestLane(transform.position); } }
     Character character;
@@ -15,9 +20,18 @@ public class CharacterController : MonoBehaviour, ICharacterController, IRotatea
         if (Managers.Instance == null)
             return;
 
+        startLocalScale = transform.localScale;
+
         EventManager.OnLevelStart.AddListener(RotateAround);
         EventManager.OnLevelStart.AddListener(Scale);
         EventManager.OnSwipeDetected.AddListener(Move);
+        Character.OnCharacterHit.AddListener(() =>
+        {
+            scaleTween.Kill();
+            isScaleable = false;
+            transform.localScale = startLocalScale;
+            Scale();
+        });
     }
 
     private void OnDisable()
@@ -28,6 +42,13 @@ public class CharacterController : MonoBehaviour, ICharacterController, IRotatea
         EventManager.OnLevelStart.RemoveListener(RotateAround);
         EventManager.OnLevelStart.RemoveListener(Scale);
         EventManager.OnSwipeDetected.RemoveListener(Move);
+        Character.OnCharacterHit.RemoveListener(() =>
+        {
+            scaleTween.Kill();
+            isScaleable = false;
+            transform.localScale = new Vector3(1, 1, 1);
+            Scale();
+        });
     }
     #endregion
   
@@ -97,7 +118,7 @@ public class CharacterController : MonoBehaviour, ICharacterController, IRotatea
         if (isScaleable)
             return;
 
-        transform.DOScale(transform.localScale + new Vector3(.2f, .2f, .2f), 5f).SetEase(Ease.Linear).OnComplete(() => {
+        scaleTween = transform.DOScale(transform.localScale + new Vector3(.2f, .2f, .2f), 3f).SetEase(Ease.Linear).OnComplete(() => {
             if (transform.localScale.x >= 2.5f)
                 isScaleable = true;
             Scale();

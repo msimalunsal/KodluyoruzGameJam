@@ -20,7 +20,7 @@ public class Character : MonoBehaviour, IDamageable
 
     #region Events
     [HideInInspector]
-    public UnityEvent OnCharacterDie = new UnityEvent();
+    public UnityEvent OnCharacterHit = new UnityEvent();
     [HideInInspector]
     public UnityEvent OnCharacterRevive = new UnityEvent();
     [HideInInspector]
@@ -62,7 +62,7 @@ public class Character : MonoBehaviour, IDamageable
 
         IsDead = true;
         IsControlable = false;
-        OnCharacterDie.Invoke();
+        OnCharacterHit.Invoke();
 
         if (CharacterControllerType == CharacterControllerType.Player)
             EventManager.OnLevelFail.Invoke();
@@ -81,6 +81,7 @@ public class Character : MonoBehaviour, IDamageable
     public void Damage()
     {
         KillCharacter();
+        Debug.Log("Hasar aldım");
     }
     #endregion
 }

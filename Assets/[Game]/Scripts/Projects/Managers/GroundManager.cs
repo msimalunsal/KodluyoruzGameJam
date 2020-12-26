@@ -109,7 +109,7 @@ public class GroundManager : Singleton<GroundManager>
             if(Grounds[i].transform.position.z < -50)
             {
                 DisposeGround(Grounds[i]);
-                CreateGround();
+                //CreateGround();
             }
         }
     }
