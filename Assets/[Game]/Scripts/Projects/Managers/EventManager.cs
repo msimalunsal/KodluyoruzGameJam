@@ -10,6 +10,7 @@ public static class EventManager
 
     #region Player Events
     public static UnityEvent OnPlayerStartedRunning=new UnityEvent();
+    public static PlayerDataEvent OnPlayerDataUpdated = new PlayerDataEvent();
     #endregion
 
     #region Level Events
@@ -27,5 +28,10 @@ public static class EventManager
     public static SwipeEvent OnSwipeDetected = new SwipeEvent();
     public static UnityEvent OnSwipeFail = new UnityEvent();
     #endregion
+
+    #region Bonus Events
+    public static UnityEvent OnCollectBonus = new UnityEvent();
+    #endregion
 }
 public class SwipeEvent : UnityEvent<Swipe, Vector2> { }
+public class PlayerDataEvent : UnityEvent<PlayerData> { }

@@ -3,6 +3,7 @@
 [RequireComponent(typeof(CanvasGroup))]
 public class Panel : MonoBehaviour
 {
+    #region Properties
     //Don't use this in your code this is just a referance to cache it.
     CanvasGroup canvasGroup;
     //Use this to access the canvas group.
@@ -25,7 +26,9 @@ public class Panel : MonoBehaviour
             return canvasGroup;
         }
     }
+    #endregion
 
+    #region Public Virtual Methods
     public virtual void ShowPanel()
     {
         CanvasGroup.alpha = 1;
@@ -40,4 +43,5 @@ public class Panel : MonoBehaviour
         CanvasGroup.blocksRaycasts = false;
         Debug.Log("Ben saklandim");
     }
+    #endregion
 }

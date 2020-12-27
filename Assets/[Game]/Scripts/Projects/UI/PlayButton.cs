@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayButton : Button
 {
+    #region Protected Methods
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -16,9 +15,12 @@ public class PlayButton : Button
         base.OnEnable();
         onClick.RemoveListener(StartGame);
     }
+    #endregion
 
-    private void StartGame()
+    #region Private Methods
+    void StartGame()
     {
         GameManager.Instance.StartGame();
     }
+    #endregion
 }

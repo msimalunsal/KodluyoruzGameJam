@@ -1,11 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GroundObject : MonoBehaviour
 {
+    #region Public Variables
     public Transform startPoint;
     public Transform endPoint;
+    #endregion
+
+    #region Private Methods
     private void OnEnable()
     {
         if (Managers.Instance == null)
@@ -19,4 +21,5 @@ public class GroundObject : MonoBehaviour
             return;
         GroundManager.Instance.RemoveGround(this);
     }
+    #endregion
 }

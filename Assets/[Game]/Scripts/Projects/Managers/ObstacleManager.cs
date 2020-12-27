@@ -1,15 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleManager : Singleton<ObstacleManager>
 {
-
+    #region Private Variables
     private float lastObstacleCreateTime;
     private float obstacleCreateWaitTime;
+    #endregion
 
+    #region Public Variables
     public bool canCreateObstacles;
+    #endregion
 
+    #region Private Methods
     private void Start()
     {
         obstacleCreateWaitTime = Random.Range(3f, 6f);
@@ -89,8 +92,9 @@ public class ObstacleManager : Singleton<ObstacleManager>
 
         EventManager.OnObstacleCreated.Invoke();
     }
+    #endregion
 
-
+    #region Public Methods
     public GameObject CreateObstacle(Vector3 position )
     {
         Debug.Log("Create obstacle");
@@ -100,5 +104,5 @@ public class ObstacleManager : Singleton<ObstacleManager>
             Quaternion.identity,
             GroundManager.Instance.Grounds[GroundManager.Instance.Grounds.Count - 1].transform);
     }
+    #endregion
 }
-   

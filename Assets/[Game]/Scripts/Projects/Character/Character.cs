@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 public enum CharacterControllerType { Player, AI }
@@ -61,7 +59,7 @@ public class Character : MonoBehaviour, IDamageable
             return;
 
         IsDead = true;
-        IsControlable = false;
+        //IsControlable = false;
         OnCharacterHit.Invoke();
 
         if (CharacterControllerType == CharacterControllerType.Player)

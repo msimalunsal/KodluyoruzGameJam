@@ -1,6 +1,7 @@
-﻿
+﻿using UnityEngine;
 public class MainMenuPanel : Panel
 {
+    #region Private Methods
     void OnEnable()
     {
         if (Managers.Instance == null)
@@ -19,4 +20,5 @@ public class MainMenuPanel : Panel
         EventManager.OnGameOver.RemoveListener(ShowPanel);
 
     }
+    #endregion
 }

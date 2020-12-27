@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
+    #region OnTrigger
     private void OnTriggerEnter(Collider collision)
     {
         IDamageable IDamageable = collision.GetComponent<IDamageable>();
@@ -12,4 +11,5 @@ public class Obstacle : MonoBehaviour
             IDamageable.Damage();
         }
     }
+    #endregion
 }

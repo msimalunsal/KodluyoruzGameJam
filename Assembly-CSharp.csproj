@@ -72,11 +72,14 @@
     <Compile Include="Assets\Ultimate 10 Plus Shaders\Scripts\U10PS_MouseRotation.cs" />
     <Compile Include="Assets\Ultimate 10 Plus Shaders\Scripts\U10PS_SnowOverTime.cs" />
     <Compile Include="Assets\Ultimate 10 Plus Shaders\Shaders\Plexus\Plexus.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Core\System\PlayerDataSystem\PlayerData.cs" />
     <Compile Include="Assets\[Game]\Scripts\Core\Utilities\Singleton.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Projects\Bonus\BonusBase.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Character\Character.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Character\CharacterController.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Character\CharacterInputListener.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Character\CharacterManager.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Projects\Ground\GroundManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Ground\GroundObject.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Interfaces\ICharacterController.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Interfaces\IDamageable.cs" />
@@ -84,7 +87,6 @@
     <Compile Include="Assets\[Game]\Scripts\Projects\Interfaces\IScaleable.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\EventManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\GameManager.cs" />
-    <Compile Include="Assets\[Game]\Scripts\Projects\Managers\GroundManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\InitManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\InputManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\LevelManager.cs" />
@@ -94,7 +96,6 @@
     <Compile Include="Assets\[Game]\Scripts\Projects\Obstacle\Obstacle.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\ScriptableObjects\Level.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\ScriptableObjects\LevelData.cs" />
-    <Compile Include="Assets\[Game]\Scripts\Projects\ScriptableObjects\ObstacleData.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\UI\MainMenuPanel.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\UI\Panel.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\UI\PlayButton.cs" />
