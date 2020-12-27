@@ -15,7 +15,7 @@ public class ObstacleManager : Singleton<ObstacleManager>
     #region Private Methods
     private void Start()
     {
-        obstacleCreateWaitTime = Random.Range(3f, 6f);
+        obstacleCreateWaitTime = Random.Range(0f, 1f);
     }
 
     private void OnEnable()
@@ -39,8 +39,7 @@ public class ObstacleManager : Singleton<ObstacleManager>
     {
         if (!canCreateObstacles)
         {
-            lastObstacleCreateTime = Time.time;     
-                                                    
+            lastObstacleCreateTime = Time.time;                                                       
             return;
         }
 
@@ -55,7 +54,7 @@ public class ObstacleManager : Singleton<ObstacleManager>
 
         float chance = Random.Range(0f, 100f);
 
-        if (chance < 60f)
+        if (chance < 90f)
         {
             lastObstacleCreateTime = Time.time; 
             EventManager.OnObstacleCreated.Invoke(); 
@@ -98,7 +97,7 @@ public class ObstacleManager : Singleton<ObstacleManager>
     public GameObject CreateObstacle(Vector3 position)
     {
         return Instantiate(LevelManager.Instance.level.GetRandomLevelObject(),
-            new Vector3(position.x, position.y, position.z + 15f),
+            new Vector3(position.x, position.y, position.z + 40f),
             Quaternion.identity,
             GroundManager.Instance.Grounds[GroundManager.Instance.Grounds.Count - 1].transform);
     }
