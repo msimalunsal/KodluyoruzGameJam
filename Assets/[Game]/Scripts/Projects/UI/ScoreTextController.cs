@@ -1,18 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreTextController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Public Variables
+    public Text coinText;
+    #endregion
+
+    #region Private Methods
+    private void OnEnable()
     {
-        
+        if (Managers.Instance == null)
+            return;
+
+        EventManager.OnPlayerDataUpdated.AddListener(UpdateText);
+        EventManager.OnGameStart.AddListener(InitilizePanel);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        if (Managers.Instance == null)
+            return;
+
+        EventManager.OnPlayerDataUpdated.RemoveListener(UpdateText);
+        EventManager.OnGameStart.RemoveListener(InitilizePanel);
     }
+
+    private void InitilizePanel()
+    {
+        var playerData = SaveLoadManager.LoadPDP<PlayerData>(SavedFileNameHolder.PlayerData, new PlayerData());
+        UpdateText(playerData);
+    }
+
+    void UpdateText(PlayerData playerData)
+    {
+        coinText.text = playerData.CoinAmount.ToString();
+    }
+    #endregion
 }
