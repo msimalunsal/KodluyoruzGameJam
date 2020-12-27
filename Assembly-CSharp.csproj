@@ -95,6 +95,7 @@
     <Compile Include="Assets\[Game]\Scripts\Projects\Obstacle\Obstacle.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\ScriptableObjects\Level.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\ScriptableObjects\LevelData.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Projects\UI\HandAnimation.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\UI\LevelStartButton.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\UI\MainMenuPanel.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\UI\Panel.cs" />
