@@ -27,3 +27,5 @@ MonoBehaviour:
   - {fileID: 8586802162874716075, guid: ccd61d6e90811154fb5faecf0aa49250, type: 3}
   - {fileID: 8501868438735325400, guid: 405bb873569fea94f980f47d848e6fcb, type: 3}
   - {fileID: 6188152867911320237, guid: cec929bb27cf1f14e82a219c61b104fd, type: 3}
+  bonusMap: {fileID: 7489489754783355986, guid: 0369deecb41255e45a767d79539f1cd1,
+    type: 3}
