@@ -55,8 +55,8 @@ public class InputManager : Singleton<InputManager>
 
         if (Input.GetMouseButtonDown(0))
         {
-            LevelManager.Instance.StartLevel();
-            EventManager.OnPlayerStartedRunning.Invoke();
+            //LevelManager.Instance.StartLevel();
+            
         }
 
         TapInput();

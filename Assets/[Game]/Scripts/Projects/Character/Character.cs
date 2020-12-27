@@ -38,9 +38,6 @@ public class Character : MonoBehaviour, IDamageable
     {
         if (Managers.Instance == null)
             return;
-
-        CharacterManager.Instance.AddCharacter(this);
-
     }
 
     private void OnDisable()
@@ -79,7 +76,6 @@ public class Character : MonoBehaviour, IDamageable
     public void Damage()
     {
         KillCharacter();
-        Debug.Log("Hasar aldım");
     }
     #endregion
 
