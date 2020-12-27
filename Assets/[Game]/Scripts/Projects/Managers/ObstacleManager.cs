@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ObstacleManager : Singleton<ObstacleManager>
 {
+<<<<<<< HEAD
     List<ObstacleBase> obstacles = new List<ObstacleBase>();
+=======
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
 
     private float lastObstacleCreateTime;
     private float obstacleCreateWaitTime;
@@ -51,21 +54,32 @@ public class ObstacleManager : Singleton<ObstacleManager>
         if (Time.time < lastObstacleCreateTime + obstacleCreateWaitTime)
             return;
 
+<<<<<<< HEAD
         
         
         float chance = Random.Range(0f, 100f);
 
         if (chance < 80f)
+=======
+        float chance = Random.Range(0f, 100f);
+
+        if (chance < 60f)
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
         {
             lastObstacleCreateTime = Time.time; 
             EventManager.OnObstacleCreated.Invoke(); 
             return; 
         }
 
+<<<<<<< HEAD
 
 
         List<GameObject> laneObjects = new List<GameObject>(LevelManager.Instance.level.Lane);
         Debug.Log(laneObjects.Count);
+=======
+        List<GameObject> laneObjects = new List<GameObject>(LevelManager.Instance.level.Lane);
+
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
         //laneObjects.Shuffle();
         //Now we remove one lane object from the list to make sure our player has one lane without an obstacle.
         laneObjects.RemoveAt(Random.Range(0, laneObjects.Count));
@@ -73,15 +87,24 @@ public class ObstacleManager : Singleton<ObstacleManager>
         //We loop the list that contains two random lanes (different order each time because we suffle it.)
         float chanceForAnotherObstacle = Random.Range(0f, 1f);//This is our chance for second obstacle if we pass this float we will create a second obstacle.
                                                               //If not we will only create one obstacle 100 percent
+<<<<<<< HEAD
         
         lastObstacleCreateTime = Time.time; //We set the last obstacle create time to Time.time to wait for next interval.
+=======
+
+        lastObstacleCreateTime = Time.time; //We set the last obstacle create time to Time.time to wait for next interval.
+
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
         for (int i = 0; i < laneObjects.Count; i++)
         {
             if (chanceForAnotherObstacle > 0.5f)
             {
                 
                 CreateObstacle(laneObjects[i].transform.position);
+<<<<<<< HEAD
                 Debug.Log(laneObjects[i].transform.position);
+=======
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
                 chanceForAnotherObstacle = 0f;
                 continue; //This statment will allow us the pass the code below in the for loop.
                           //We don't want to create two obstacles on the same lane however we also don't know if we passed the
@@ -98,8 +121,15 @@ public class ObstacleManager : Singleton<ObstacleManager>
 
     public GameObject CreateObstacle(Vector3 position )
     {
+<<<<<<< HEAD
         return Instantiate(LevelManager.Instance.level.GetRandomLevelObject(),
             position,
+=======
+        Debug.Log("Create obstacle");
+        Debug.Log(position);
+        return Instantiate(LevelManager.Instance.level.GetRandomLevelObject(),
+            new Vector3(position.x, position.y, position.z + 15f),
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
             Quaternion.identity,
             GroundManager.Instance.Grounds[GroundManager.Instance.Grounds.Count - 1].transform);
     }

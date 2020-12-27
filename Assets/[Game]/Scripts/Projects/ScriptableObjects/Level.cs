@@ -10,7 +10,11 @@ public class Level : ScriptableObject
     [SerializeField]
     public List<GameObject> Obstacle = new List<GameObject>();
     [SerializeField]
+<<<<<<< HEAD
     public List<GameObject> Lane= new List<GameObject>();
+=======
+    public List<GameObject> Lane = new List<GameObject>();
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
     public GameObject GetRandomLevelObject()
     {
         try
@@ -27,7 +31,10 @@ public class Level : ScriptableObject
 
     public GameObject GetRandomTrack()
     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
         try
         {
             int rand = Random.Range(0, 3);

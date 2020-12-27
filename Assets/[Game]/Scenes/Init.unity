@@ -179,6 +179,11 @@ GameObject:
   - component: {fileID: 935342161}
   - component: {fileID: 935342165}
   - component: {fileID: 935342164}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 935342168}
+  - component: {fileID: 935342166}
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -188,6 +193,8 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &935342160
 Transform:
+<<<<<<< HEAD
+=======
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -202,17 +209,39 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &935342161
 MonoBehaviour:
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935342159}
+<<<<<<< HEAD
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &935342161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935342159}
+=======
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3bc4885953af04428de8ad1ccf6d8d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 11400000, guid: 6268d0c84e87ac449960a2df8bdee427, type: 2}
+<<<<<<< HEAD
+=======
+  LevelData: {fileID: 0}
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
 --- !u!114 &935342162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +254,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18431baf811e46a4d94e17ba64e14beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  canCreateObstacles: 0
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
 --- !u!114 &935342163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,3 +298,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameStarted: 0
+<<<<<<< HEAD
+=======
+--- !u!114 &935342166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935342159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d93b2b9d75e08c4f936eeb4e509f83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSwipeLength: 0.5
+  triggerSwipeAtMinLength: 0
+  useEightDirections: 0
+--- !u!114 &935342168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935342159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6755b097abbbf488ede64f3fe04df0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab

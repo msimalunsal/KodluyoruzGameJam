@@ -5,7 +5,63 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : Singleton<LevelManager>
 {
+<<<<<<< HEAD
     public Level level;
+=======
+    #region Variables
+    public Level level;
+    public LevelData LevelData;
+    #endregion
+
+    #region Properties
+    //Public Properities about current Level
+    public Level CurrentLevel { get { return (LevelData.Levels[LevelIndex]); } }
+    //public DifficulityData DifficulityData { get { return (LevelData.Levels[LevelIndex].DifficulityData[DifficulityIndex]); } }
+    
+    private bool isLevelStarted;
+
+    public bool IsLevelStarted { get { return isLevelStarted; } private set { isLevelStarted = value; } }
+
+    public int LevelIndex
+    {
+        get
+        {
+            return PlayerPrefs.GetInt("LastLevel", 0);
+        }
+        set
+        {
+            if (value >= LevelData.Levels.Count)
+                value = 0;
+
+            PlayerPrefs.SetInt("LastLevel", value);
+        }
+    }
+
+    //public int DifficulityIndex { get; set; }
+    #endregion
+
+    #region Public Methods
+    public void StartLevel()
+    {
+        if (IsLevelStarted)
+            return;
+
+        IsLevelStarted = true;
+        EventManager.OnLevelStart.Invoke();
+    }
+
+    public void FinishLevel()
+    {
+        if (!IsLevelStarted)
+            return;
+
+        IsLevelStarted = false;
+        EventManager.OnLevelFinish.Invoke();
+    }
+    #endregion
+
+    #region GameOver
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
     private void OnEnable()
     {
         EventManager.OnGameOver.AddListener(GameOver);
@@ -63,4 +119,8 @@ public class LevelManager : Singleton<LevelManager>
         SceneManager.SetActiveScene(levelScene);
         PlayerPrefs.SetString("LastLevel", levelScene.name);
     }
+<<<<<<< HEAD
+=======
+    #endregion
+>>>>>>> e0a193a27833b18600e1eb1d05d70bf8ab62b9ab
 }
