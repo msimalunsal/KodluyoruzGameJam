@@ -63,15 +63,15 @@ public class Character : MonoBehaviour, IDamageable
             EventManager.OnLevelFail.Invoke();
     }
 
-    public void ReviveCharacter()
-    {
-        if (!IsDead)
-            return;
+    //public void ReviveCharacter()
+    //{
+    //    if (!IsDead)
+    //        return;
 
-        IsDead = false;
-        IsControlable = true;
-        OnCharacterRevive.Invoke();
-    }
+    //    IsDead = false;
+    //    IsControlable = true;
+    //    OnCharacterRevive.Invoke();
+    //}
 
     public void Damage()
     {
@@ -82,10 +82,14 @@ public class Character : MonoBehaviour, IDamageable
     #region OnTrigger
     private void OnTriggerEnter(Collider other)
     {
-        var bonus = other.GetComponent<BonusBase>();
+        var bonus = other.GetComponent<BonusStartLine>();
+        var getBonus = other.GetComponent<BonusBase>();
 
         if (bonus != null)
             EventManager.OnCollectBonus.Invoke();
+
+        if (getBonus != null)
+            getBonus.SetBonus();
     }
     #endregion
 }
