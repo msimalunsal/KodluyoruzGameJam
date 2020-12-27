@@ -13,19 +13,15 @@ public class ObstacleManager : Singleton<ObstacleManager>
     #endregion
 
     #region Private Methods
-    private void Start()
-    {
-        obstacleCreateWaitTime = Random.Range(0f, 1f);
-    }
-
     private void OnEnable()
     {
+        obstacleCreateWaitTime = Random.Range(0f, 1f);
+
         if (Managers.Instance == null)
             return;
 
         EventManager.OnLevelStart.AddListener(() => canCreateObstacles = true);
-
-
+        EventManager.OnCollectBonus.AddListener(() => canCreateObstacles = false);
     }
 
     private void OnDisable()
@@ -33,6 +29,7 @@ public class ObstacleManager : Singleton<ObstacleManager>
         if (Managers.Instance == null)
             return;
         EventManager.OnLevelStart.RemoveListener(() => canCreateObstacles = true);
+        EventManager.OnCollectBonus.RemoveListener(() => canCreateObstacles = false);
     }
 
     private void Update()
@@ -96,6 +93,9 @@ public class ObstacleManager : Singleton<ObstacleManager>
     #region Public Methods
     public GameObject CreateObstacle(Vector3 position)
     {
+        //if (position.z > bonusStartLineTransform.position.z)
+        //    return null;
+
         return Instantiate(LevelManager.Instance.level.GetRandomLevelObject(),
             new Vector3(position.x, position.y, position.z + 40f),
             Quaternion.identity,
