@@ -54,6 +54,7 @@ public class LevelManager : Singleton<LevelManager>
 
         IsLevelStarted = false;
         EventManager.OnLevelFinish.Invoke();
+        Debug.Log("Level Bitti");
     }
     #endregion
 

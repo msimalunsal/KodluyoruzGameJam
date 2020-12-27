@@ -8,8 +8,7 @@ public class BonusStartLine : MonoBehaviour
 
         if (player == CharacterControllerType.Player)
         {
-            EventManager.OnLevelFinish.Invoke();
-            Debug.Log("level bitti");
+            LevelManager.Instance.FinishLevel();
         }
     }
 }
