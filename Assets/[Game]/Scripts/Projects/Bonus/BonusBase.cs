@@ -2,10 +2,21 @@
 
 public abstract class BonusBase : MonoBehaviour
 {
-    public int bonus;
-
-    public virtual int GetBonus()
+    private void OnEnable()
     {
-        return bonus;
+        EventManager.OnCollectBonus.AddListener(SetBonus);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnCollectBonus.RemoveListener(SetBonus);
+    }
+
+    public virtual void SetBonus()
+    {
+        var playerData = SaveLoadManager.LoadPDP<PlayerData>(SavedFileNameHolder.PlayerData, new PlayerData());
+        playerData.CoinAmount += 10;
+        SaveLoadManager.SavePDP(playerData, SavedFileNameHolder.PlayerData);
+        Debug.Log(playerData.CoinAmount);
     }
 }

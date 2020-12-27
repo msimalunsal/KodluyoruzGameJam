@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using DG.Tweening;
 
 public class BonusStartLine : MonoBehaviour
 {
@@ -8,8 +9,8 @@ public class BonusStartLine : MonoBehaviour
 
         if (player == CharacterControllerType.Player)
         {
-            EventManager.OnLevelFinish.Invoke();
-            Debug.Log("level bitti");
+            other.GetComponent<Character>().IsControlable = false;
+            //other.transform.DOMoveX(GroundManager.Instance.MiddleLane.transform.position.x, 1f, false);
         }
     }
 }
