@@ -95,10 +95,8 @@ public class ObstacleManager : Singleton<ObstacleManager>
     #endregion
 
     #region Public Methods
-    public GameObject CreateObstacle(Vector3 position )
+    public GameObject CreateObstacle(Vector3 position)
     {
-        Debug.Log("Create obstacle");
-        Debug.Log(position);
         return Instantiate(LevelManager.Instance.level.GetRandomLevelObject(),
             new Vector3(position.x, position.y, position.z + 15f),
             Quaternion.identity,

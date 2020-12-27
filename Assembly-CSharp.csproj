@@ -73,8 +73,12 @@
     <Compile Include="Assets\Ultimate 10 Plus Shaders\Scripts\U10PS_SnowOverTime.cs" />
     <Compile Include="Assets\Ultimate 10 Plus Shaders\Shaders\Plexus\Plexus.cs" />
     <Compile Include="Assets\[Game]\Scripts\Core\System\PlayerDataSystem\PlayerData.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Core\System\SaveLoadSystem\SaveFileNameHolder.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Core\System\SaveLoadSystem\SaveLoadManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Core\Utilities\Singleton.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Projects\Bonus\Bonus.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Bonus\BonusBase.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Projects\Bonus\BonusStartLine.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Character\Character.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Character\CharacterController.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Character\CharacterInputListener.cs" />
@@ -104,6 +108,7 @@
     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Blur.shader" />
     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Plexus\Plexus.compute" />
     <None Include="Assets\ThirdPartAsset\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+    <None Include="Assets\ThirdPartAsset\JsonDotNet\link.xml" />
     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Depth Mask Edge Detection.shader" />
     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Ocean.shader" />
     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Dissolve.shader" />
@@ -302,6 +307,9 @@
     </Reference>
     <Reference Include="DOTween">
       <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Assets/ThirdPartAsset/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>E:/Unity/2019.4.6f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

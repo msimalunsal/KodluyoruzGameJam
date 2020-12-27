@@ -720,7 +720,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7895444955491486201}
-  - component: {fileID: 377285388717629187}
+  - component: {fileID: 6590229962031020969}
   m_Layer: 0
   m_Name: Map 1
   m_TagString: Untagged
@@ -743,7 +743,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &377285388717629187
+--- !u!114 &6590229962031020969
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1953113935793088917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aead57dec0136e4ba7bd8881474c1ef, type: 3}
+  m_Script: {fileID: 11500000, guid: b9ab37a867e20954ba9e20cc404ed922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startPoint: {fileID: 5607245914036952711}
@@ -6079,7 +6079,7 @@ Transform:
   m_GameObject: {fileID: 5607245913559305956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3.9340556}
-  m_LocalScale: {x: 1, y: 1, z: 0.18548118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5607245913662981676}
   m_RootOrder: 25
@@ -6228,7 +6228,7 @@ Transform:
   m_GameObject: {fileID: 5607245914036952710}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -4.2030034}
-  m_LocalScale: {x: 1, y: 1, z: 0.18548118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5607245913662981676}
   m_RootOrder: 24

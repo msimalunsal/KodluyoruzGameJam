@@ -82,4 +82,14 @@ public class Character : MonoBehaviour, IDamageable
         Debug.Log("Hasar aldım");
     }
     #endregion
+
+    #region OnTrigger
+    private void OnTriggerEnter(Collider other)
+    {
+        var bonus = other.GetComponent<BonusBase>();
+
+        if (bonus != null)
+            EventManager.OnCollectBonus.Invoke();
+    }
+    #endregion
 }

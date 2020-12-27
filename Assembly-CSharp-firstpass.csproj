@@ -257,6 +257,9 @@
     <Reference Include="DOTween">
       <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Assets/ThirdPartAsset/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>E:/Unity/2019.4.6f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>

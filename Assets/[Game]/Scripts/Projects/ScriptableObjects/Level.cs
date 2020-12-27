@@ -10,6 +10,11 @@ public class Level : ScriptableObject
     public List<GameObject> Lane = new List<GameObject>();
     #endregion
 
+    #region Public Variables
+    [Space]
+    public GameObject bonusMap;
+    #endregion
+
     #region Public Random Methods
     public GameObject GetRandomLevelObject()
     {

@@ -274,6 +274,9 @@
     <Reference Include="DOTweenEditor">
       <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Assets/ThirdPartAsset/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>

@@ -5,8 +5,8 @@ using UnityEngine;
 public class GroundManager : Singleton<GroundManager>
 {
     #region Private Variables
-    List<GroundObject> grounds;
     private bool canMoveTracks;
+    GroundObject bonusMap;
     #endregion
 
     #region Public Variables
@@ -15,7 +15,9 @@ public class GroundManager : Singleton<GroundManager>
     #endregion
 
     #region Properties
+    List<GroundObject> grounds;
     public List<GroundObject> Grounds { get { return (grounds == null) ? grounds = new List<GroundObject>() : grounds; } private set { grounds = value; } }
+
     private List<LaneObject> lanes;
     public List<LaneObject> Lanes { get { return (lanes == null) ? lanes = new List<LaneObject>() : lanes; } set { lanes = value; } }
     public LaneObject MiddleLane
@@ -48,18 +50,22 @@ public class GroundManager : Singleton<GroundManager>
     #endregion
 
     #region Ground
+
     private void Initilize()
     {
-       
         for (int i = 0; i < groundCount; i++)
         {
             CreateGround();
         }
+
+        if(bonusMap == null)
+            Instantiate(LevelManager.Instance.level.bonusMap.gameObject, Grounds[Grounds.Count - 1].endPoint.position + Vector3.forward * 4f, Quaternion.identity);
     }
 
     private void CreateGround()
     {
         Vector3 createPos = Vector3.zero;
+
         if (Grounds != null)
         {
             if (Grounds.Count > 0)
@@ -67,7 +73,6 @@ public class GroundManager : Singleton<GroundManager>
                 createPos = Grounds[Grounds.Count - 1].endPoint.position + Vector3.forward * 4f;
             }
         }
-        //GameObject trackObj = Instantiate(LevelManager.Instance.CurrentLevel.GetRandomTrack(LevelManager.Instance.CurrentTheme), createPos, Quaternion.identity);
         GameObject groundObj = Instantiate(LevelManager.Instance.level.GetRandomTrack().gameObject, createPos, Quaternion.identity);
     }
 
@@ -84,7 +89,7 @@ public class GroundManager : Singleton<GroundManager>
         ManageGroundObjects();
     }
 
-    #region Add&RemoveGround
+    #region Add&RemoveGrounds
 
     public void AddGround(GroundObject groundObject)
     {
@@ -110,6 +115,7 @@ public class GroundManager : Singleton<GroundManager>
             Grounds[i].transform.position += Vector3.back * groundSpeed * Time.deltaTime;
         }
     }
+
     void ManageGroundObjects()
     {
         for (int i = 0; i < Grounds.Count; i++)
