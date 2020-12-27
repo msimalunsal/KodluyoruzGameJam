@@ -1,13 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 public class HandAnimation : MonoBehaviour
 {
+    #region Variables
     RectTransform imageTransform;
     Tween handTween;
+    #endregion
 
+    #region Private Methods
     private void OnEnable()
     {
         imageTransform = GetComponent<RectTransform>();
@@ -31,4 +32,5 @@ public class HandAnimation : MonoBehaviour
                 AnimationHand();
             });
     }
+    #endregion
 }
