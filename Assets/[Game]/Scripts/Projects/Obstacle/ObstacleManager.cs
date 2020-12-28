@@ -39,9 +39,7 @@ public class ObstacleManager : Singleton<ObstacleManager>
             lastObstacleCreateTime = Time.time;                                                       
             return;
         }
-
         SpawnObstacles();
-
     }
 
     private void SpawnObstacles()

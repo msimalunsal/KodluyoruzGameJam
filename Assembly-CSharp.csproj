@@ -90,9 +90,9 @@
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\InputManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\LevelManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\Managers.cs" />
-    <Compile Include="Assets\[Game]\Scripts\Projects\Managers\ObstacleManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Objects\LaneObject.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Obstacle\Obstacle.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Projects\Obstacle\ObstacleManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\ScriptableObjects\Level.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\ScriptableObjects\LevelData.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\UI\HandAnimation.cs" />
