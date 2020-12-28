@@ -115,7 +115,11 @@ MonoBehaviour:
   m_MinSize: {x: 879, y: 492}
   m_MaxSize: {x: 16004, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 113
+=======
+  controlID: 138
+>>>>>>> 188de2247d8b0a5b482b5cd0514681062b3109d5
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +144,11 @@ MonoBehaviour:
   m_MinSize: {x: 603, y: 492}
   m_MaxSize: {x: 12003, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 114
+=======
+  controlID: 139
+>>>>>>> 188de2247d8b0a5b482b5cd0514681062b3109d5
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +174,11 @@ MonoBehaviour:
   m_MinSize: {x: 603, y: 221}
   m_MaxSize: {x: 12003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 115
+=======
+  controlID: 140
+>>>>>>> 188de2247d8b0a5b482b5cd0514681062b3109d5
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -430,9 +442,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 6.980483, y: -0.60162306, z: -4.6645074}
     speed: 2
     m_Value: {x: 6.980483, y: -0.60162306, z: -4.6645074}
+=======
+    m_Target: {x: 0.46311456, y: -5.2726784, z: 20.720592}
+    speed: 2
+    m_Value: {x: 0.46311456, y: -5.2726784, z: 20.720592}
+>>>>>>> 188de2247d8b0a5b482b5cd0514681062b3109d5
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -478,6 +496,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: 0.14833564, y: 0.26298118, z: -0.040957004, w: 0.95244956}
     speed: 2
     m_Value: {x: -0.14833564, y: -0.26298118, z: 0.040957004, w: -0.95244956}
@@ -485,6 +504,15 @@ MonoBehaviour:
     m_Target: 10.971345
     speed: 2
     m_Value: 10.971345
+=======
+    m_Target: {x: 0.21725269, y: 0.0029283422, z: -0.00065175997, w: 0.97611094}
+    speed: 2
+    m_Value: {x: -0.21725269, y: -0.002928342, z: 0.0006517599, w: -0.9761109}
+  m_Size:
+    m_Target: 27.745985
+    speed: 2
+    m_Value: 27.745985
+>>>>>>> 188de2247d8b0a5b482b5cd0514681062b3109d5
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -628,7 +656,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 82320000
       m_LastClickedID: 0
       m_ExpandedIDs: 
       m_RenameOverlay:
@@ -693,20 +721,35 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/[Game]/Sounds
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/[Game]/Sounds
+=======
+    - Assets/[Game]/Scripts/Projects/Ground
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/[Game]/Scripts/Projects/Ground
+>>>>>>> 188de2247d8b0a5b482b5cd0514681062b3109d5
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\UnityProjectFinished\GithubProjects\KodluyoruzGameJamLast
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 169}
     m_SelectedIDs: 7a370000
     m_LastClickedID: 14202
     m_ExpandedIDs: 0000000050370000523700005437000056370000583700005a3700005c3700005e37000060370000623700006437000066370000683700006a37000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 247}
+    m_SelectedIDs: 96360000
+    m_LastClickedID: 13974
+    m_ExpandedIDs: 00000000de350000e0350000e2350000e4350000e6350000e8350000ea350000ec350000ee350000f0350000f2350000f4350000f6350000f8350000fa350000fc35000000ca9a3b
+>>>>>>> 188de2247d8b0a5b482b5cd0514681062b3109d5
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -734,7 +777,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 3a3d0000
     m_LastClickedID: 15674
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000050370000523700005437000056370000583700005a3700005c3700005e37000060370000623700006437000066370000683700006a370000
+=======
+    m_ExpandedIDs: 00000000de350000e0350000e2350000e4350000e6350000e8350000ea350000ec350000ee350000f0350000f2350000f4350000f6350000f8350000fa350000fc350000
+>>>>>>> 188de2247d8b0a5b482b5cd0514681062b3109d5
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
