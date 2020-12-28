@@ -255,10 +255,10 @@
       <HintPath>E:/Unity/2019.4.6f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Assets/ThirdPartAsset/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Assets/ThirdPartAsset/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>E:/Unity/2019.4.6f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -621,31 +621,31 @@
       <HintPath>E:/Unity/2019.4.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

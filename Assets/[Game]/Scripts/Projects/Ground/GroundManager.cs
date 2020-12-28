@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class GroundManager : Singleton<GroundManager>
@@ -12,6 +11,7 @@ public class GroundManager : Singleton<GroundManager>
     #region Public Variables
     public int groundCount = 7;
     public float groundSpeed = 5f;
+    public float groundLong;
     #endregion
 
     #region Properties
@@ -58,7 +58,9 @@ public class GroundManager : Singleton<GroundManager>
             CreateGround();
         }
 
-        if(bonusMap == null)
+        groundLong = Grounds[Grounds.Count - 1].startPoint.position.z;
+
+        if (bonusMap == null)
             Instantiate(LevelManager.Instance.level.bonusMap.gameObject, Grounds[Grounds.Count - 1].endPoint.position + Vector3.forward * 4f, Quaternion.identity);
     }
 

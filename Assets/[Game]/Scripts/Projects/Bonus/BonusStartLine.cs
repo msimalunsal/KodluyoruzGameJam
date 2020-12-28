@@ -9,8 +9,7 @@ public class BonusStartLine : MonoBehaviour
 
         if (player == CharacterControllerType.Player)
         {
-            other.GetComponent<Character>().IsControlable = false;
-            //other.transform.DOMoveX(GroundManager.Instance.MiddleLane.transform.position.x, 1f, false);
+            BonusManager.Instance.IncreaseBonusGroundSpeed(other.transform.localScale.x);
         }
     }
 }

@@ -58,9 +58,6 @@ public class Character : MonoBehaviour, IDamageable
         IsDead = true;
         //IsControlable = false;
         OnCharacterHit.Invoke();
-
-        if (CharacterControllerType == CharacterControllerType.Player)
-            EventManager.OnLevelFail.Invoke();
     }
 
     //public void ReviveCharacter()
@@ -86,7 +83,10 @@ public class Character : MonoBehaviour, IDamageable
         var getBonus = other.GetComponent<BonusBase>();
 
         if (bonus != null)
+        {
             EventManager.OnCollectBonus.Invoke();
+            IsControlable = false;
+        }
 
         if (getBonus != null)
             getBonus.SetBonus();

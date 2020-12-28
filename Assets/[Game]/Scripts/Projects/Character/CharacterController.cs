@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 
-public class CharacterController : MonoBehaviour, ICharacterController, IRotateable, IScaleable
+public class CharacterController : MonoBehaviour, ICharacterController, IScaleable
 {
     #region Variables
     Tween scaleTween;
@@ -22,7 +22,7 @@ public class CharacterController : MonoBehaviour, ICharacterController, IRotatea
 
         startLocalScale = transform.localScale;
 
-        EventManager.OnLevelStart.AddListener(RotateAround);
+        EventManager.OnLevelStart.AddListener(() => { Character.IsControlable = true; });
         EventManager.OnLevelStart.AddListener(Scale);
         EventManager.OnSwipeDetected.AddListener(Move);
         Character.OnCharacterHit.AddListener(() =>
@@ -32,6 +32,8 @@ public class CharacterController : MonoBehaviour, ICharacterController, IRotatea
             transform.localScale = startLocalScale;
             Scale();
         });
+
+        EventManager.OnCollectBonus.AddListener(ReduceScale);
     }
 
     private void OnDisable()
@@ -39,7 +41,7 @@ public class CharacterController : MonoBehaviour, ICharacterController, IRotatea
         if (Managers.Instance == null)
             return;
 
-        EventManager.OnLevelStart.RemoveListener(RotateAround);
+        EventManager.OnLevelStart.AddListener(() => { Character.IsControlable = true; });
         EventManager.OnLevelStart.RemoveListener(Scale);
         EventManager.OnSwipeDetected.RemoveListener(Move);
         Character.OnCharacterHit.RemoveListener(() =>
@@ -49,9 +51,11 @@ public class CharacterController : MonoBehaviour, ICharacterController, IRotatea
             transform.localScale = new Vector3(1, 1, 1);
             Scale();
         });
+
+        EventManager.OnCollectBonus.RemoveListener(ReduceScale);
     }
     #endregion
-  
+
     #region Public Methods
     public void Move(Vector3 direction)
     {
@@ -103,14 +107,6 @@ public class CharacterController : MonoBehaviour, ICharacterController, IRotatea
         Character.OnCharacterSwitchLane.Invoke();
     }
 
-    public void RotateAround()
-    {
-        Character.IsControlable = true;
-        transform.DORotate(new Vector3(360, 0, 0), .5f, RotateMode.FastBeyond360)
-         .From(new Vector3(0, 0, 0))
-         .SetLoops(-1)
-         .SetEase(Ease.Linear);
-    }
 
     bool isScaleable;
     public void Scale()
@@ -123,6 +119,19 @@ public class CharacterController : MonoBehaviour, ICharacterController, IRotatea
                 isScaleable = true;
             Scale();
         });
+    }
+
+    public void ReduceScale()
+    {
+        scaleTween.Kill();
+        isScaleable = false;
+
+        scaleTween = transform.DOScale(new Vector3(0, 0, 0), 2.3f)
+            .SetEase(Ease.Linear)
+            .OnComplete(() =>
+            {
+                LevelManager.Instance.FinishLevel();
+            });
     }
     #endregion
 }

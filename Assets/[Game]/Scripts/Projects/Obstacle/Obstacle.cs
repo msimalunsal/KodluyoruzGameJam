@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Obstacle : MonoBehaviour
         if (IDamageable != null)
         {
             IDamageable.Damage();
+            DamageParticulController.Instance.PlayEffect();
         }
     }
     #endregion

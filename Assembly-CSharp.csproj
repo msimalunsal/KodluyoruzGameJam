@@ -66,18 +66,20 @@
     <Compile Include="Assets\ThirdPartAsset\AurynSky\WinterArena\Scripts\ChestDemo.cs" />
     <Compile Include="Assets\ThirdPartAsset\AurynSky\WinterArena\Scripts\Rotator.cs" />
     <Compile Include="Assets\ThirdPartAsset\LushkinR\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\ThirdPartAsset\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\[Game]\Scripts\Core\System\PlayerDataSystem\PlayerData.cs" />
     <Compile Include="Assets\[Game]\Scripts\Core\System\SaveLoadSystem\SaveFileNameHolder.cs" />
     <Compile Include="Assets\[Game]\Scripts\Core\System\SaveLoadSystem\SaveLoadManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Core\Utilities\Singleton.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Bonus\Bonus.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Bonus\BonusBase.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Projects\Bonus\BonusManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Bonus\BonusStartLine.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Character\Character.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Projects\Character\CharacterAnimationController.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Character\CharacterController.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Character\CharacterInputListener.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Character\CharacterManager.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Projects\FX\DamageParticulController.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Ground\GroundManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Ground\GroundObject.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Interfaces\ICharacterController.cs" />
@@ -90,11 +92,12 @@
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\InputManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\LevelManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Managers\Managers.cs" />
-    <Compile Include="Assets\[Game]\Scripts\Projects\Managers\ObstacleManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Objects\LaneObject.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\Obstacle\Obstacle.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Projects\Obstacle\ObstacleManager.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\ScriptableObjects\Level.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\ScriptableObjects\LevelData.cs" />
+    <Compile Include="Assets\[Game]\Scripts\Projects\UI\GameEndPanel.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\UI\HandAnimation.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\UI\LevelStartButton.cs" />
     <Compile Include="Assets\[Game]\Scripts\Projects\UI\MainMenuPanel.cs" />
@@ -106,7 +109,7 @@
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\ThirdPartAsset\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+    <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\ThirdPartAsset\JsonDotNet\link.xml" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
@@ -116,7 +119,6 @@
     <None Include="Assets\ThirdPartAsset\20 Logos PSD\Fonts\kaushanscript\SIL Open Font License.txt" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\ThirdPartAsset\QuickOutline\Readme.txt" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\ThirdPartAsset\20 Logos PSD\Fonts\peacesans\FREE FONT LICENSE.txt" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
@@ -126,7 +128,6 @@
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\ThirdPartAsset\QuickOutline\Resources\Shaders\OutlineFill.shader" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\ThirdPartAsset\20 Logos PSD\Fonts\firasansheavy\SIL Open Font License.txt" />
     <None Include="Assets\ThirdPartAsset\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
@@ -315,10 +316,10 @@
       <HintPath>E:/Unity/2019.4.6f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Assets/ThirdPartAsset/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Assets/ThirdPartAsset/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>E:/Unity/2019.4.6f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -681,31 +682,31 @@
       <HintPath>E:/Unity/2019.4.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/pc/Desktop/KodluyoruzGameJamLast/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>E:/UnityProjectFinished/GithubProjects/KodluyoruzGameJamLast/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
