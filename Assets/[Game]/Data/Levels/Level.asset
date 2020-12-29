@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7684a45efad35448312f82383d419c, type: 3}
+  m_Name: Level
+  m_EditorClassIdentifier: 
+  Grounds:
+  - {fileID: 1953113935793088917, guid: 831c1155e2a9864488859ed3f25d46fe, type: 3}
+  - {fileID: 7881569165391210059, guid: 0407f5d1cca325e4c929e091fb1e3065, type: 3}
+  - {fileID: 3561812225446258147, guid: 8088076c4d0351e49b0e374461ca07a9, type: 3}
+  Obstacle:
+  - {fileID: 2087019750678736798, guid: 4f718d438fc9c744a8d91037f7365c26, type: 3}
+  - {fileID: 2688793589205181582, guid: 11efd6b3f8276f244bc34417e3c4e99a, type: 3}
+  - {fileID: 7748841288780856757, guid: f08c0e6fb35d865489e9e4f4e1ecc08f, type: 3}
+  - {fileID: 7274037792676821686, guid: 73945b90cfb5cf6439ac8523accf36ae, type: 3}
+  - {fileID: 6257084270668463376, guid: 1a6b4045caad0e445b382e7392bff61a, type: 3}
+  - {fileID: 1857716172501090578, guid: 25c7342f97171ca4395087ec1babf105, type: 3}
+  Lane:
+  - {fileID: 8586802162874716075, guid: ccd61d6e90811154fb5faecf0aa49250, type: 3}
+  - {fileID: 8501868438735325400, guid: 405bb873569fea94f980f47d848e6fcb, type: 3}
+  - {fileID: 6188152867911320237, guid: cec929bb27cf1f14e82a219c61b104fd, type: 3}
+  bonusMap: {fileID: 7489489754783355986, guid: 0369deecb41255e45a767d79539f1cd1,
+    type: 3}
